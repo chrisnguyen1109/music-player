@@ -1,0 +1,275 @@
+:root {
+    --white-color: #fff;
+    --text-color: #333;
+    --border-color: #dbdbdb;
+    --primary-color: #ec1f55;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    line-height: 1.6;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+}
+
+.main {
+    display: flex;
+    height: 100vh;
+}
+
+.music-layer {
+    margin: 0 auto;
+}
+
+.playing .control-icon-pause {
+    display: block;
+}
+
+.playing .control-icon-play {
+    display: none;
+}
+
+.dashboard {
+    background-color: var(--white-color);
+    padding: 1.8rem 3.2rem;
+    border: 1px solid #dbdbdb73;
+    border-bottom: 1px solid #ebebeb;
+    box-shadow: 0 1px 1px #ccc;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transform: translateX(-50%);
+    left: 50%;
+    max-width: fit-content;
+}
+
+.dashboard__header {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.header-playing {
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.header-song-name {
+    color: var(--text-color);
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.dashboard__cd {
+    width: 200px;
+    margin: 0 auto;
+    margin-bottom: 1.2rem;
+    transition: all .1s linear;
+}
+
+.cd-thumb {
+    width: 100%;
+    padding-top: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left;
+    border-radius: 50%;
+    /* animation: rotatePlayer 10s infinite linear; */
+}
+
+@keyframes rotatePlayer {
+    from {
+        transform: rotate(-360deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.dashboard__control {
+    margin-bottom: 1rem;
+}
+
+.control-btn {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    margin-bottom: 2.4rem;
+}
+
+.control-btn-item {
+    cursor: pointer;
+    color: #666;
+    padding: 1.8rem;
+    font-size: 2rem;
+    transition: opacity .2s linear;
+}
+
+.control-btn-item:not(:last-child) {
+    margin-right: 4rem;
+}
+
+.control-btn-item:hover {
+    opacity: .8;
+}
+
+.control-btn-repeat {
+
+}
+
+.control-btn-prev {
+
+}
+
+.control-btn-toggle-play {
+    background-color: var(--primary-color);
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    color: var(--white-color);
+    font-size: 2.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.control-icon-play {
+
+}
+
+.control-icon-pause {
+    display: none;
+}
+
+.control-btn-next {
+
+}
+
+.control-btn-random {
+
+}
+
+.control-input {
+
+}
+
+.control-progress {
+    width: 100%;
+    -webkit-appearance: none;
+    height: 6px;
+    background: #d3d3d3;
+    opacity: 0.7;
+    outline: none;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.control-progress:hover {
+    opacity: 1;
+}
+
+.control-progress::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    width: 10px;
+    height: 18px;
+    background-color: var(--primary-color);
+    border-radius: 5px;
+}
+
+.playlist {
+    margin-top: 429px;
+    padding: 1.6rem 1.2rem;
+    width: 491px;
+}
+
+.playlist__item {
+    display: flex;
+    align-items: center;
+    padding: 1rem 1.8rem;
+    margin-bottom: 1.8rem;
+    background-color: var(--white-color);
+    box-shadow: 0 1px 1px #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.playlist__item:hover {
+    /* background-color: #ec1f553b; */
+    opacity: .8;
+}
+
+/* .playlist__item:active {
+    opacity: .8;
+} */
+
+.playlist__item.active-song {
+    background-color: var(--primary-color);
+}
+
+.item-thumbnail {
+    width: 60px;
+    height: 60px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+    border-radius: 50%;
+    margin: 0 1rem;
+}
+
+.item-body {
+    width: 60%;
+    margin: 0 1rem;
+}
+
+.item-song-name {
+    font-size: 1.8rem;
+    color: var(--text-color);
+    font-weight: 700;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.item-song-singer {
+    font-size: 1.2rem;
+    color: #999;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.item-option {
+    font-size: 1.8rem;
+    color: #999;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.playlist__item.active-song .item-song-name,
+.playlist__item.active-song .item-song-singer,
+.playlist__item.active-song .item-option {
+    color: #fff;
+}
+
+.item-option:hover {
+    opacity: .8;
+}
+
+
+
+
+

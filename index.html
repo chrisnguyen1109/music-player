@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mucis Player</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="main">
+        <div class="music-layer">
+            <div class="dashboard">
+                <div class="dashboard__header">
+                    <h4 class="header-playing">Now playing</h4>
+                    <h2 class="header-song-name">Waiting...</h2>
+                </div>
+                <div class="dashboard__cd">
+                    <div class="cd-thumb" style="background-image: url(https://icon2.cleanpng.com/20180308/szw/kisspng-phonograph-record-lp-record-cd-discography-5aa0fe9ba0ab52.2249866615205003796581.jpg)"></div>
+                </div>
+                <div class="dashboard__control">
+                    <div class="control-btn">
+                        <div class="control-btn-item control-btn-repeat">
+                            <i class="fas fa-redo"></i>
+                        </div>
+                        <div class="control-btn-item control-btn-prev">
+                            <i class="fas fa-step-backward"></i>
+                        </div>
+                        <div class="control-btn-item control-btn-toggle-play">
+                            <i class="fas fa-play control-icon-play"></i>
+                            <i class="fas fa-pause control-icon-pause"></i>
+                        </div>
+                        <div class="control-btn-item control-btn-next">
+                            <i class="fas fa-step-forward"></i>
+                        </div>
+                        <div class="control-btn-item control-btn-random">
+                            <i class="fas fa-random"></i>
+                        </div>
+                    </div>
+                    <div class="control-input">
+                        <input type="range" name="control-progress" id="control-progress" class="control-progress" min="0" max="100" step="0.01" value="0">
+                        <audio id="audio" src=""></audio>
+                    </div>
+                </div>
+            </div>
+            <div class="playlist">
+            </div>
+        </div>
+    </div>
+
+    <script src="./main.js"></script>
+</body>
+</html>
